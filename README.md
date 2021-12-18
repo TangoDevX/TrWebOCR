@@ -1,39 +1,4 @@
-# TrWebOCR-开源的离线OCR  
-
-## 介绍
-TrWebOCR，基于开源项目 [Tr](https://github.com/myhub/tr) 构建。  
-在其基础上提供了http调用的接口，便于你在其他的项目中调用。  
-并且提供了易于使用的web页面，便于调试或日常使用。   
-
-![web页面](https://images.alisen39.com/20200517184619.png)  
-
-## 特性
-* 中文识别  
-快速高识别率
- 
-* 文字检测  
-支持一定角度的旋转  
-
-* 并发请求  
-由于模型本身不支持并发，但通过tornado多进程的方式，能支持一定数量的并发请求。具体并发数取决于机器的配置。
-
-
-## 安装需求  
- 
-### 运行平台  
-* ✔ Python 3.6+  
-* ✔ Ubuntu 16.04
-* ✔ ️Ubuntu 18.04
-* ✔ CentOS 7   
-* ✔ Docker   
-
-Windows和MacOS系统下可通过构建Docker镜像来使用，暂不支持直接部署使用  
-其他Linux平台暂未测试，可自行安装测试  
-
-### 最低配置要求  
-* CPU:    1核  
-* 内存:    2G  
-* SWAP:   2G  
+alisen39大佬的项目，这里仅做clone备份，请访问https://github.com/alisen39/TrWebOCR
 
 ## 安装说明  
 ### 服务器部署
@@ -108,34 +73,3 @@ img_b64 = img_to_base64('./img1.png')
 res = requests.post(url=url, data={'img': img_b64})
 ```
 
-
-
-## 效果展示  
-
-![文档识别](https://images.alisen39.com/20200501171943.png)  
-
-![验证码识别](https://images.alisen39.com/20200501173211.png)
-
-## 更新记录  
-* 2020年08月17日  
-    更新Dockerfile，docker镜像支持tr2.3  
-    
-* 2020年07月30日  
-    支持启动命令选择GPU/CPU  
-
-* 2020年07月26日  
-	更新tr2.0版，支持GPU  
-
-[更多记录 >>>](https://github.com/alisen39/TrWebOCR/blob/master/updateHistory.md)  
-
-
-## License  
-Apache 2.0
-
-## 鸣谢
-* 感谢 [myhub](https://github.com/myhub) 和它的开源项目[Tr](https://github.com/myhub/tr) 
-
-## 最后  
-项目在 [GitHub](https://github.com/alisen39/TrWebOCR) 和 [码云](https://gitee.com/alisen39/TrWebOCR) 上同步更新，国内朋友可以通过码云clone项目~  
-  
-如果你也喜欢这个项目，不妨给个star (^.^)✨
