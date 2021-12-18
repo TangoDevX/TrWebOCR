@@ -1,0 +1,13 @@
+[Unit]
+Description=TrWebOCR Services
+After=multi-user.target
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/usr/local/python-3.7/python /usr/local/TrWebOCR/backend/main.py
+WorkingDirectory=/usr/local/TrWebOCR/backend/
+Restart=always
+
+[Install]
+WantedBy=multi-user.target 
